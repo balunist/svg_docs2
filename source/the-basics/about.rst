@@ -1,70 +1,64 @@
-About MapBoards
-***************
+About Save As SVG
+*****************
 
-MapBoards is a Fusion 360 add-in which focuses on preparing your model for
-manufacturing.
+.. role:: blue-bold
 
-The goal of this section is to give you a quick overview of what MapBoards is and how you
+Save As SVG is a Fusion 360 add-in which exports Fusion 360 sketches as SVG files.
+
+The goal of this section is to give you a quick overview of what Save As SVG is and how you
 might use it.
 
-MapBoards (MB) allows you to create maps, which are arrangements of component bodies
-in a model on one or more boards or layouts. The arrangements are done by creating components
-containing copies of the bodies in your model, leaving your original model intact. Placement
-is based on a tight rectangular bounding box around each body, providing quick results and
-reasonable nesting.
+Save As SVG (SAS) allows you to create SVG files from your Fusion 360 sketches, making it easy
+to use your sketch designs in other applications or for manufacturing purposes.
 
-The map layout can be customized to match your preferences or manufacturing requirements
-then saved as default. See :ref:`map_layout-label` for details.
+SAS is invoked from the context menu of a sketch object in the browser tree as shown below.
+Multiple sketch objects can be selected and exported to SVG files with a single invocation.
 
-**Try something simple…** Begin by selecting a simple design with only a few components to
-become familiar with the options available. When you launch MB, it will evaluate your model
-and display a list of **board types described by material types and thicknesses**. With each board
-type there are two dimensions, width and length, which will be used as the default board size
-when creating a map. The first time a material type is encountered these values will be set large
-enough to accommodate the largest component of that board type. You can set these
-dimensions to be whatever you prefer for that target board size and it will remember and use
-those dimensions the next time that material type is encountered.
+The resulting SVG files are colored according to the sketch's defined profile loops.
 
-When executing MB make sure the option **Map Output Type** is set to **Component Bodies**,
-which is the default. This selection will create and display a map of the components in your
-model on their corresponding board types.
+.. image:: /_static/images/SaveAsSVG_Invoke.png
+    :scale: 80 %
+    :align: center
 
-Creating a map of component bodies results in a single entry in the UnDo list labeled 
-**UnDo MapBoards**. This enables you to run MB multiple times and create maps with different
-options, which you can roll back and forth through using commands UnDo (Cmd-Z) and ReDo
-(Shift Cmd-Z).
+|
 
-To Create a map you simply click the OK button. Popup messages will keep you informed of the
-progress. When completed one or more mapped boards are displayed in the Top View and the
-screen will be resized to view both your model and the created map. The view may be rotated
-if there are multiple boards to fill your screen in more of a landscape view.
+The SVG (Scalable Vector Graphic) file created conforms to SVG standards and as the name 
+implies, will be scalable. What this means is that the SVG file can be resized without 
+losing quality, making it suitable for various applications such as web graphics, print 
+designs, and more. Applications which import or view SVG files include vector graphic 
+editors, web browsers, and CAD software.
 
-If you are using or plan to include linked components and assemblies in your model, see 
-:ref:`linked-label` for details.
+The initial image size viewed by the application you will be importing it into will match 
+the size of the sketch in Fusion 360 provided you match the export :blue-bold:`Scale` for 
+that application. The most common scale is 96 DPI used by most modern applications.
 
-The dimensions you enter in the lumber tab represent the default board size that will be used
-when mapping. 
+There are two :blue-bold:`Input Type` options available in Save As SVG:
 
-Don’t worry, MB will not modify your model. A map is created as a subcomponent at the root 
-of the browser tree and cleared with each run of **MB**. You can remove the map by pressing 
-Cmd-Z (UnDo MapBoards) or rerunning MB and pressing ESC then OK to delete.
+- **Entire Sketch** - Exports all sketch curves in one selectable color.
+- **Sketch Profiles** - Exports profiles with selectable colors for each profile loop.
+  Profiles loops are defined by their containment within each other.
+  The outer most profile loop is identified as :blue-bold:`Perimeters`. Profile loops 
+  immediately inside Perimeters are considered :blue-bold:`Insets` and profile loops 
+  contained within Insets are considered :blue-bold:`Cutouts`. Lines not part of a 
+  profile loop will be included as an Inset. The intent of this scheme is to provide 
+  control of SVG line coloring in a predictable way. Options are provided to include 
+  or exclude these profile types.
 
-Experiment with the following options to get the results you desire:
-  - :ref:`arrange_type-label` - choose from 3 optional arrangement types
-  - :ref:`rotate-label` - permit 90 degree component rotation for best fit
+If the sketch includes labels, SAS will optionally export them as line vectors, 
+providing the same visual appearance as text in the Fusion sketch.
 
-For a complete list of options with descriptions, see :ref:`options-label`. You can also 
-reference this options list from the table of contents.
+Fusion sketches can include two additional line types, :blue-bold:`Construction` 
+and :blue-bold:`Centerline`. SAS provides options to include these line types.
+When included, these line types will be exported as dashed lines in the SVG file.
 
+SAS provides an option to specify the line weight or thickness. This together with 
+line colors provides more control for laser cutting.
 
 .. note::
-    Unlock the full capabilities of Fusion 360 and MapBoards by adhering to these best practices:
+  SVG files exported by SAS are fully compliant with SVG standards. The scale, which
+  is Dots Per Inch (DPI), can be specified to match the application you will be importing
+  the SVG file into. The modern scale is 96 DPI and not all applications have migrated
+  to. See :ref:`scale-label` for more information.
 
-    - Always start by creating a component to house your 3D body and associated
-      resources like sketches. Never place 3D bodies directly at the root, outside of
-      a component.
-    - Include only one body per component.
-    - Provide your components with meaningful names, which will help navigate your model
-      when it becomes more complicated.
 
 

@@ -1,0 +1,86 @@
+{% load static %}
+<!-- MapBoards Pro - Product documetation -->
+<div class="card col-sm-12 mx-0 my-0 p-0">
+    <div class="mx-4">
+    <div class="card-header">
+        <strong><h1 class="text-primary text-center">Save As SVG Description</h1></strong>
+    </div>
+
+    <div class="card-body">
+        <strong class="section" id="version">Latest Version:</strong>&ensp;<strong>{{ svg_version }}</strong>
+        <div class="mx-3">
+        <p>This doumentation is based on the latest version.&ensp;Updates will be 
+        downloaded and installed when Save As SVG is run and will require a Fusion restart to activate.</p>
+
+        <p>Installs can be downloaded from the Autodesk App Store.&ensp;<a href="{% url 'apps-documents' 'appstore' %}">App Store</a></p>
+
+        <p>View version history <a href="{% url 'apps-documents' 'svghistory' %}">here</a>.</p>
+        </div>
+
+        <strong  class="section" id="howto">How to Use</strong> 
+        <div class="mx-3 mb-4">
+        <p>The <strong>Save As SVG</strong> add-in app is invoked from the context menu of a sketch
+        object in the browser tree as shown below.&ensp;Begining with version 1.388 multiple sketch objects
+        can be selected and exported to SVG files with a single invocation.</p>
+        <div class="mx-3">
+        <img class="img-fluid" src="{% static "images/SaveAsSVG_Invoke.png" %}" alt="image" style="width:50%">
+           New >>>>     
+        <img class="img-fluid" src="{% static "images/SaveAsSVG_Multi.jpg" %}" alt="image" style="width:26.5%">
+        </div>
+        <br>
+        <p style="font-size: 2rem;">Options:</p>
+        <dl>
+        <dt>Input Type</dt>
+        <dd>    
+            <dl class="mx-4">
+                <dt>Entire Sketch</dt><dd class="mx-3">Exports all sketch curves in one selectable color</dd>
+                <dt>Sketch Profiles</dt><dd class="mx-3">Exports profiles with color coded lines.&ensp;
+                    The outer most profile loop is identified as <strong style="color:blue;">Perimeters</strong>.&ensp;
+                    Profile loops inside Perimeters are considered <strong style="color:blue;">Insets</strong> and profile loops contained 
+                    within Insets are considered <strong style="color:blue;">Cutouts</strong>.&ensp;Line not part of a profile loop 
+                    will be included as an Inset.&ensp;The intent of this scheme is to provide control of SVG line coloring in a
+                    predictable way.&ensp;Profile types can be included or not with the options described below.</dd>
+            </dl>
+        </dd> 
+        <dt>Line Weight</dt><dd class="mx-3">This is the thickness of the lines in the SVG file created.&ensp;The value entered will represent a value in the current unit type setting.</dd>
+        <dt>Scale</dt>
+        <dd class="mx-3">The SVG output file will be scale to selected Dots Per Inch (DPI).
+            <ul>
+                <li>Scale to 96 DPI, the modern scale used by Inkscape and browsers.</li>
+                <li>Scale to 72 DPI, an older scale used by Adobe Illustrator.</li>
+                <li>Scale to 90 DPI, a retired scale used by Vectric VCarve Pro.</li>
+            </ul></p>
+        <dt>Include Perimeters</dt><dd class="mx-3">Include all Perimeter profile loops found in the export<dd>
+        <dt>Include Insets</dt><dd class="mx-3">Include all Inset profile loops and curves not found in a profile loop in the export<dd>
+        <dt>Include Cutouts</dt><dd class="mx-3">Include all Cutout profile loops found in the export<dd>
+        <dt>Include Labels</dt><dd class="mx-3">Include all Labels (text) by converting to line curves then exporting<dd>
+        <dt>Include Contruction</dt><dd class="mx-3">Include all Construction lines in export<dd>
+        <dt>Include Centerlines</dt><dd class="mx-3">Include all Centerlines in export<dd>
+        <dt>Color</dt>
+        <dd>
+            <div>
+                <p>The color selection for lines will also apply to the fill color filling the corresponding profile when fill option is selected.<p>
+                <div class="mx-3">
+                <img class="img-fluid" src="{% static "images/SaveAsSVG_Colors.png" %}" alt="image" style="width:40%">
+                </div>
+                <br>
+                <strong>Fill Faces</strong> 
+                <p>When selected the faces inside their corresponing loops will be filled in with the selected color.&ensp;
+                Use it to highlight features like insets, cutouts or top face (perimeter).&ensp;The following is an example of an SVG butterfly image created 
+                when the <strong>Fill Faces</strong> option is selected</p>
+            </div>
+        </dd>
+        </dl>
+
+        <div class="mt-0 mb-2 ml-5">
+
+            <img class="img-fluid" src="{% static "images/Butterfly.svg" %}" alt="Butterfly" style="width:40%">
+            <img class="img-fluid" src="{% static "images/Butterfly_Fill.svg" %}" alt="Butterfly" style="width:40%">
+
+        </div>
+
+        <p>Both the <strong>Lineweight</strong> and <strong>Color</strong> of lines can be used for controlling toolpaths for either laser or a CNC.&ensp;
+        For example Red may result in a cut-through for laser and other colors may result is less intense results.</p>
+    </div>
+    </div>
+</div>  <!-- card end -->

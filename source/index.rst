@@ -1,9 +1,9 @@
-.. MapBoards Documentation master file
+.. Save As SVG Documentation master file
    The index files create chapters, each referenced file is a H1 Section 
 
-#####################
-MapBoards Description
-#####################
+#######################
+Save As SVG Description
+#######################
 
 .. toctree::
    :maxdepth: 1
@@ -11,8 +11,6 @@ MapBoards Description
 
    the-basics/index
    installation/index
-   pre-mapping/index
-   mapping/index
-   post-mapping/index
+   exporting/index
    options/index
 

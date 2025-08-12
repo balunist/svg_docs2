@@ -7,20 +7,10 @@ Options
 .. toctree::
    :maxdepth: 1
 
-   arrange
-   rotate
-   spacing
-   cut-list
-   ignore-thick
-   include-board
-   include-cutouts
-   labels
-   laser-kerf
-   map-type
-   orientation
-   software-updates
-   trim
-   unit-type
-   appearance
-
+   colors
+   fill-faces
+   include-profs
+   input-type
+   line-weight
+   scale
 

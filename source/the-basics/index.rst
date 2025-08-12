@@ -7,4 +7,3 @@ The Basics
    :name: the_basics-label
 
    about
-   overview
