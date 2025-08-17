@@ -1,9 +1,9 @@
 .. Save As SVG Documentation master file
    The index files create chapters, each referenced file is a H1 Section 
 
-#######################
-Save As SVG Description
-#######################
+########################
+Save As SVG User's Guide
+########################
 
 .. toctree::
    :maxdepth: 1
