@@ -10,7 +10,7 @@ Input Type
 **Sketch Profiles**
     Exports profiles with selectable colors for each profile loop.
     Profiles loops are defined by their containment within each other.
-    The outer most profile loop is identified as :blue-bold:`Perimeters`. Profile loops 
+    The outer most profile loops are identified as :blue-bold:`Perimeters`. Profile loops 
     immediately inside Perimeters are considered :blue-bold:`Insets` and profile loops 
     contained within Insets are considered :blue-bold:`Cutouts`. Lines not part of a 
     profile loop will be included as an Inset. The intent of this scheme is to provide 

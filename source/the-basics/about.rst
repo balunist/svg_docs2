@@ -58,7 +58,7 @@ line colors provides more control for laser cutting.
   SVG files exported by SAS are fully compliant with SVG standards. The scale, which
   is Dots Per Inch (DPI), can be specified to match the application you will be importing
   the SVG file into. The modern scale is 96 DPI and not all applications have migrated
-  to. See :ref:`scale-label` for more information.
+  to this scale. See :ref:`scale-label` for more information.
 
 
 
