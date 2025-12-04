@@ -5,22 +5,43 @@
     :class: no-scaled-link
 
 
-Installing Save As SVG
-**********************
+Installing MapBoards Pro
+************************
 
 .. _win_install-label:
 
 Windows Installation
 ====================
 
+
 To complete an installation or update of the add-in:
 
 - Verify that you are running the latest Fusion 360 version.
-- Run the add-in **Installer** by selecting it in the Downloads directory of File Explorer;
+- Run the add-in **Installer** by selecting it in the Downloads directory of File Explorer, then
   right-click and select Install.
+
+If an install error occurs then follow the
+:ref:`Windows Pre-Install Instructions <win-pre-install-label>` below.
+
+If the install runs without error, restart Fusion and follow these steps to check if
+the add-in was successfully installed:
+
 - With Fusion 360 running, press **Shift-S**, select the Add-Ins tab, find the add-in in the list,
   select it, and press Run.
 - Verify that the add-in is running. |running|
+- If the installed Add-In is not in the list or it is not running, follow the
+  :ref:`Windows Pre-Install Instructions <win-pre-install-label>` below.
+
+.. _win-pre-install-label:
+
+Windows Pre-Install Instructions
+================================
+
+- If the app had previously been installed, uninstall it first. From Windows search type
+  "Installed apps". Select it from the resulting menu, find and select the app, click on
+  the hamburger icon to its right (...) and select Uninstall.
+- After Uninstalling the old version rerun the app installer
+
 
 .. _mac_os_install-label:
 
@@ -69,4 +90,5 @@ add-in by restarting Fusion:
 
   3. Finally, set write permissions:
    :tiny:`sudo chmod u+w /Users/${USER}/Library/\'Application Support\'/Autodesk/ApplicationPlugins`
+
 
