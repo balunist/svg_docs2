@@ -5,8 +5,8 @@
     :class: no-scaled-link
 
 
-Installing MapBoards Pro
-************************
+Installing Save As SVG
+**********************
 
 .. _win_install-label:
 
