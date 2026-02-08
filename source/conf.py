@@ -1,9 +1,9 @@
 # Configuration file for the Sphinx documentation builder.
 
-project = 'MapBoards Documentation'
+project = "Save As SVG User's Guide"
 copyright = "2020-%Y, Icarus Soft Landings, LLC"
 author = "Icarus"
-release = '1.885'
+release = "1.410"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -31,4 +31,11 @@ html_use_index = False
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_show_sphinx = False
-pdf_documents = [("index", "MapBoards", "MapBoards doc", "Icarus")]
+pdf_documents = [
+    (
+        "index",
+        "Save As SVG User's Guide",
+        "Save As SVG User's Guide doc",
+        "Icarus",
+    ),
+]
