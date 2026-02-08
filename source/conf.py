@@ -1,6 +1,6 @@
 # Configuration file for the Sphinx documentation builder.
 
-project = "Save As SVG User's Guide"
+project = "Save As SVG"
 copyright = "2020-%Y, Icarus Soft Landings, LLC"
 author = "Icarus"
 release = "1.410"
@@ -34,8 +34,8 @@ html_show_sphinx = False
 pdf_documents = [
     (
         "index",
-        "Save As SVG User's Guide",
-        "Save As SVG User's Guide doc",
+        "Save As SVG",
+        "Save As SVG doc",
         "Icarus",
     ),
 ]
