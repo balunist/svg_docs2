@@ -6,7 +6,7 @@ Colors
 This option provides color selection for the lines representing Perimeter, Cutouts, Insets 
 and Label profiles. Expanding **Colors** will show the following:
 
-.. image:: /_static/images/colors.png
+.. image:: /_static/images/colors.jpg
     :width: 40%
     :align: center
 

@@ -4,7 +4,8 @@ Include Profiles
 ========================
 
 Choose these options to include the sketch profiles in the SVG file export. Shown below 
-the profile types, Perimeters, Cutouts, Insets, Labels, Construction lines and Center lines.
+the profile types, Perimeters, Cutouts, Insets or line types Labels, Construction and 
+Center.
 
 .. image:: /_static/images/include_profiles.png
     :width: 40%

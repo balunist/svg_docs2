@@ -8,7 +8,7 @@ Fill Faces
 The :blue:`Fill Faces` option, when selected, will fill profiles with their corresponding 
 selected color. Use it to highlight features like insets, cutouts, or perimeters.
 
-.. image:: /_static/images/colors.png
+.. image:: /_static/images/colors.jpg
     :width: 40%
     :align: center
 
